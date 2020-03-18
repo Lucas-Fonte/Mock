@@ -8,7 +8,7 @@ const Card: React.FC = () => {
 
   useEffect(() => {
     async function loadData() {
-      const response = await axios.get('http://localhost:9000/.netlify/functions/hello');
+      const response = await axios.get('/hello');
       const { data } = response;
 
       setMessage(data.msg);
