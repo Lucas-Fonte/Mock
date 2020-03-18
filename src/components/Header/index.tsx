@@ -7,7 +7,7 @@ import logo from '../../assets/logo.png';
 const Header: React.FC = () => (
   <Container>
     <Link to="/">
-      <img src={logo} alt="Mock" width="100" height="110" />
+      <img src={logo} alt="Mock" width="140" height="110" />
     </Link>
     <a href="https://github.com/Lucas-Fonte/Mock" target="_blank" rel="noopener noreferrer">
       <GoMarkGithub size="30" color="#000" />
