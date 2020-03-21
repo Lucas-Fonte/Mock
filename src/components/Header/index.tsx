@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoMarkGithub } from 'react-icons/go';
 import { Container } from './styles';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.jpg';
 
 const Header: React.FC = () => (
   <Container>
