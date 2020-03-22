@@ -5,13 +5,11 @@ import { ThemeContext } from 'styled-components';
 import { Container } from './styles';
 import lightLogo from '../../assets/lightLogo.svg';
 import darkLogo from '../../assets/darkLogo.svg';
+import { AppContext } from '../../App';
 
-interface Props {
-  toggleTheme(): void;
-}
-
-const Header: React.FC<Props> = ({ toggleTheme }) => {
+const Header: React.FC = () => {
   const { title, colors } = useContext(ThemeContext);
+  const { toggleTheme }: any = useContext(AppContext);
   const [logo, setLogo] = useState(darkLogo);
 
   useEffect(() => {

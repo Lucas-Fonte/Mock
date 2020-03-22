@@ -9,7 +9,6 @@ export const Container = styled.div`
   padding: 10px;
   width: 300px;
   height: 250px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.37);
 
   h1 {
     margin-top: 30px;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container } from './styles';
 import Loading from '../Loading';
-import { timeout } from '../../utils/timeout';
+import { timeout } from '../../utils/tools/timeout';
 
 const Card: React.FC = () => {
   const [message, setMessage] = useState<string>();
