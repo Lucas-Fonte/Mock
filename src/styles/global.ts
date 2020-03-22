@@ -22,6 +22,8 @@ export default createGlobalStyle`
     body {
         -webkit-font-smoothing: antialiased;
         position: fixed;
+        background: ${(props) => props.theme.colors.background};
+        color: ${(props) => props.theme.colors.text};
     }
     body, input, button, select, label {
         font: 12px 'Montserrat', sans-serif;

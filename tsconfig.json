@@ -24,6 +24,9 @@
   },
   "include": [
     "src", "typings", "src/lamda", "utils"
+  ],
+  "files": [
+    "src/styles/styled.d.ts"
   ]
 }
 

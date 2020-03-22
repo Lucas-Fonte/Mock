@@ -4,7 +4,11 @@ import Main from '../pages/Main';
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/" exact component={Main} />
+    <Route
+      path="/"
+      exact
+      component={Main}
+    />
     <Redirect from="*" to="/" />
   </Switch>
 );
