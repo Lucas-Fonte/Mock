@@ -9,6 +9,6 @@ export const Container = styled.div`
   padding: 5px 10px;
 
   img {
-    margin-left: -30%;
+    margin-left: -10%;
   }
 `;

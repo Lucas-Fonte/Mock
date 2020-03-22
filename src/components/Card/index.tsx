@@ -14,7 +14,7 @@ const Card: React.FC = () => {
       setLoading(true);
       await timeout(1500);
 
-      const response = await axios.get('/.netlify/functions/hello');
+      const response = await axios.get('/.netlify/functions/api/hello');
       const { data } = response;
 
       setMessage(data.msg);
