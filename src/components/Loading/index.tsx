@@ -1,13 +1,17 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 import { Container } from './styles';
-import animationData from '../../assets/loading.json';
+import loadingAnimationData from '../../assets/loading.json';
+import mailingAnimationData from '../../assets/mailing.json';
 
-const Loading: React.FC = () => {
+interface LoadingProps {
+  loadingType: string;
+}
+const Loading = ({ loadingType }: LoadingProps) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData,
+    animationData: loadingType === 'mailing' ? mailingAnimationData : loadingAnimationData,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },

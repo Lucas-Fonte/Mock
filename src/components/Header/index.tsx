@@ -1,8 +1,13 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { GoMarkGithub } from 'react-icons/go';
+import { MdEmail } from 'react-icons/md';
+import { FaLinkedin } from 'react-icons/fa';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
-import { Container } from './styles';
+import { Link } from 'react-router-dom';
+import {
+  Container, VerticalContainer, HorizontalContainer, SideContainer,
+} from './styles';
 import lightLogo from '../../assets/lightLogo.svg';
 import darkLogo from '../../assets/darkLogo.svg';
 import { AppContext } from '../../App';
@@ -20,23 +25,32 @@ const Header: React.FC = () => {
       <a href=".">
         <img src={logo} alt="Mock" />
       </a>
-      <div>
-        <Switch
-          onChange={toggleTheme}
-          checked={title === 'dark'}
-          checkedIcon={false}
-          uncheckedIcon={false}
-          height={15}
-          width={30}
-          handleDiameter={13}
-          onColor="#666"
-          offColor="#000"
-
-        />
-        <a href="https://github.com/Lucas-Fonte/Mock" target="_blank" rel="noopener noreferrer">
-          <GoMarkGithub size="30" color={colors.text} />
-        </a>
-      </div>
+      <SideContainer>
+        <HorizontalContainer>
+          <Switch
+            onChange={toggleTheme}
+            checked={title === 'dark'}
+            checkedIcon={false}
+            uncheckedIcon={false}
+            height={15}
+            width={30}
+            handleDiameter={13}
+            onColor="#666"
+            offColor="#000"
+          />
+          <a href="https://www.linkedin.com/in/lucas-fonte-02b03a164/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size="30" color={colors.text} />
+          </a>
+        </HorizontalContainer>
+        <VerticalContainer>
+          <a href="https://github.com/Lucas-Fonte/Mock" target="_blank" rel="noopener noreferrer">
+            <GoMarkGithub size="30" color={colors.text} />
+          </a>
+          <Link to="/mail">
+            <MdEmail size="30" color={colors.text} />
+          </Link>
+        </VerticalContainer>
+      </SideContainer>
     </Container>
   );
 };

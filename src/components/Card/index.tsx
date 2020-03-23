@@ -4,6 +4,7 @@ import { Container } from './styles';
 import Loading from '../Loading';
 import { timeout } from '../../utils/tools/timeout';
 
+
 const Card: React.FC = () => {
   const [message, setMessage] = useState<string>();
   const [number, setNumber] = useState<number>();
@@ -24,10 +25,11 @@ const Card: React.FC = () => {
 
     loadData();
   }, []);
+
   return (
     <Container>
       {
-      loading ? <Loading />
+      loading ? <Loading loadingType="loading" />
         : (
           <>
             <h2>{message}</h2>

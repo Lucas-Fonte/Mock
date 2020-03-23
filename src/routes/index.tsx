@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Redirect, Route } from 'react-router-dom';
-import Main from '../pages/Main';
+import Main from '../layout/Main';
+import Mail from '../layout/Mail';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -8,6 +9,10 @@ const Routes: React.FC = () => (
       path="/"
       exact
       component={Main}
+    />
+    <Route
+      path="/mail"
+      component={Mail}
     />
     <Redirect from="*" to="/" />
   </Switch>
