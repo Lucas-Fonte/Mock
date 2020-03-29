@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
