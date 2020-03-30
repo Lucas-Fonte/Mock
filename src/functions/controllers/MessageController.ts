@@ -14,7 +14,7 @@ class MessageController {
   async store(req: Request, res: Response) {
     const { email } = req.body;
 
-    await QueueSchema.create({
+    QueueSchema.create({
       action: 'message being sent',
     });
 
