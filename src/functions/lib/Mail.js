@@ -14,8 +14,8 @@ class Mail {
   sendMail(message) {
     return this.transporter.sendMail(message,
       // eslint-disable-next-line arrow-body-style
-      async (error, info) => {
-        await QueueSchema.create({
+      (error, info) => {
+        QueueSchema.create({
           action: JSON.stringify(error || info),
         });
 
