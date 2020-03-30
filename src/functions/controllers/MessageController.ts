@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import Mail from '../lib/Mail';
+import QueueSchema from '../cluster/QueueSchema';
 
 const EMAIL_USER = String(process.env.EMAIL_USER);
 
@@ -12,6 +13,10 @@ class MessageController {
 
   async store(req: Request, res: Response) {
     const { email } = req.body;
+
+    await QueueSchema.create({
+      action: 'message being sent',
+    });
 
     Mail.sendMail({
       from: `Mock <${EMAIL_USER}>`,
