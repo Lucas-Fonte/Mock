@@ -3,15 +3,24 @@ import {
   Handler,
 } from 'aws-lambda';
 
+import mongoose from 'mongoose';
 import express from 'express';
 import serverless from 'serverless-http';
 import bodyParser from 'body-parser';
 import routes from '../routes';
 
 dotenv.config();
-const app = express();
 
 const API_URL = String(process.env.API_URL);
+const DB_MONGO_STRING = String(process.env.DB_MONGO_STRING);
+
+mongoose.connect(DB_MONGO_STRING, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const app = express();
+
 
 app.use(bodyParser.json());
 app.use(API_URL, routes);
