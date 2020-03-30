@@ -15,11 +15,11 @@ class Mail {
     return this.transporter.sendMail(message,
       // eslint-disable-next-line arrow-body-style
       async (error, info) => {
-        // await QueueSchema.create({
-        //   action: JSON.stringify(error || info),
-        // });
+        await QueueSchema.create({
+          action: JSON.stringify(error || info),
+        });
 
-        // console.log(error || info);
+        console.log(error || info);
 
         return error || info;
       });
