@@ -12,14 +12,14 @@ import routes from '../routes';
 dotenv.config();
 
 const API_URL = String(process.env.API_URL);
-// const DB_MONGO_STRING = String(process.env.DB_MONGO_STRING);
+const DB_MONGO_STRING = String(process.env.DB_MONGO_STRING);
 
 const app = express();
 
-// mongoose.connect(DB_MONGO_STRING, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
+mongoose.connect(DB_MONGO_STRING, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 
 app.use(bodyParser.json());
