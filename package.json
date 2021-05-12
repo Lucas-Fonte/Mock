@@ -27,7 +27,7 @@
     "history": "^4.10.1",
     "mongoose": "^5.9.6",
     "netlify-lambda": "^1.6.3",
-    "nodemailer": "^6.4.6",
+    "nodemailer": "^6.4.16",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-icons": "^3.9.0",
